@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table table-bordered">
+    <!-- table caption will be displayed here-->
+    <tr>
+      <td id="caption" colspan="4">{{$ctrl.name}}</td>
+    </tr>
+    <th>
+      <td>Name</td>
+      <td>Age</td>
+      <td>City</td>
+    </th>
+
+    <!-- students will be displayed here-->
+    <tr ng-repeat="student in $ctrl.students">
+      <td></td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.city}}</td>
+    </tr>
+  </table>
+</div>
