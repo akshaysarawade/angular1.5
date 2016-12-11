@@ -30,6 +30,17 @@ const requires = [
   'app.student'
 ];
 
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDXRATOL8e7wPnHJDf6nI-NWh8Rmm5Ai1Y",
+    authDomain: "angular-basics-62b2c.firebaseapp.com",
+    databaseURL: "https://angular-basics-62b2c.firebaseio.com",
+    storageBucket: "angular-basics-62b2c.appspot.com",
+    messagingSenderId: "283996275923"
+  };
+  firebase.initializeApp(config);
+
+
 // Mount on window for testing
 window.app = angular.module('app', requires);
 

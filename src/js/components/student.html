@@ -4,18 +4,17 @@
     <tr>
       <td id="caption" colspan="4">{{$ctrl.name}}</td>
     </tr>
-    <th>
+    <tr>
       <td>Name</td>
       <td>Age</td>
-      <td>City</td>
-    </th>
+      <td>Country</td>
+    </tr>
 
     <!-- students will be displayed here-->
     <tr ng-repeat="student in $ctrl.students">
-      <td></td>
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
-      <td>{{student.city}}</td>
+      <td>{{student.country}}</td>
     </tr>
   </table>
 </div>

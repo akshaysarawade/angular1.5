@@ -1,17 +1,13 @@
 class StudentCtrl {
-	constructor() {
-		this.students = [
-		{
-			name: 'Cesc', age: 30, city: 'London'
-		},{
-			name: 'Henrik', age: 27, city: 'Manchester'
-		},{
-			name: 'CR', age: 31, city: 'Madrid'
-		},{
-			name: 'Robert', age: 28, city: 'Munich'
-		},{
-			name: 'Paul', age: 22, city: 'Manchester'
-		}];
+	constructor(StudentService) {
+		'ngInject';
+		let students = StudentService.getData();
+		let me = this;
+		students.then(function(res) {
+			me.students = res;
+		}, function(err) {
+			console.log(err);
+		});
 		this.name = 'Student Records';
 	}
 
