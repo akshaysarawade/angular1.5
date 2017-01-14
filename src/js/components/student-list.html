@@ -2,8 +2,6 @@
   <div>
     <button type="button" class="btn btn-primary" ui-sref-active="active"
           ui-sref="app.createStudent">Add</button>
-    <button type="button" class="btn btn-info">Edit</button>
-    <button type="button" class="btn btn-warning">Delete</button>
   </div>
   <table class="table table-bordered">
     <!-- table caption will be displayed here-->
@@ -15,6 +13,9 @@
       <td>Name</td>
       <td>Age</td>
       <td>Country</td>
+      <td><button type="button" class="btn btn-info">Edit</button></td>
+      <td><button type="button" class="btn btn-warning">Delete</button></td>
+      <td><button type="button" class="btn btn-info">Details</button></td>
     </tr>
 
     <!-- students will be displayed here-->
@@ -23,6 +24,9 @@
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
       <td>{{student.country}}</td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.editStudent">Edit</a></td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.delete">Delete</a></td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.detailsStudent">Details</a></td>
     </tr>
   </table>
 </div>
