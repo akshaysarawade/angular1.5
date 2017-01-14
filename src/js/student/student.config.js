@@ -8,7 +8,7 @@ function StudentConfig($stateProvider) {
   })
   .state('app.createStudent', {
     url: '/student/create',
-    template: '<createStudent></createStudent>'
+    template: '<create-student></create-student>'
   });
 };
 
