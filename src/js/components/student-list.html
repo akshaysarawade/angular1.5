@@ -3,7 +3,7 @@
     <button type="button" class="btn btn-primary" ui-sref-active="active"
           ui-sref="app.createStudent">Add</button>
     <button type="button" class="btn btn-info">Edit</button>
-    <button type="button" class="btn btn-warning">Delete</button>  
+    <button type="button" class="btn btn-warning">Delete</button>
   </div>
   <table class="table table-bordered">
     <!-- table caption will be displayed here-->
@@ -11,6 +11,7 @@
       <td id="caption" colspan="4">{{$ctrl.name}}</td>
     </tr>
     <tr>
+      <td>Key</td>
       <td>Name</td>
       <td>Age</td>
       <td>Country</td>
@@ -18,6 +19,7 @@
 
     <!-- students will be displayed here-->
     <tr ng-repeat="student in $ctrl.students">
+      <td>{{student.key}}</td>
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
       <td>{{student.country}}</td>

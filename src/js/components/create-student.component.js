@@ -9,8 +9,13 @@ class createStudentCtrl {
 			console.log(err);
 		});
 		this.name = 'Student Records';
-*/	}
+*/
+    this.studentService = StudentService;
+  }
 
+  addNewRecord () {
+    this.studentService.saveStudent();
+  }
 
 }
 
