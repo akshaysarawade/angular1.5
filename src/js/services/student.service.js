@@ -33,8 +33,8 @@ class StudentService {
   //  TODO: remove below function and add this code into getData() above
   getDataByKey (key) {
     let def = this._$q.defer();
-    let tempKey = '-KYdjcTB1vy5bOpGRn6j';  //  replace this with the actual key
-    let ref = firebase.database().ref('students/'+tempKey);
+    // let tempKey = '-KYdjcTB1vy5bOpGRn6j';  //  replace this with the actual key
+    let ref = firebase.database().ref('students/'+key);
     ref.once("value")
       .then(function(snapshot) {
         let record = snapshot.val();

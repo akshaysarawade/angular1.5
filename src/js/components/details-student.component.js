@@ -1,13 +1,24 @@
 class detailsStudentCtrl {
-	constructor(StudentService) {
+	constructor(StudentService, $stateParams, $scope) {
 		'ngInject';
-
-		this.name = 'Vishal V Lohkare';
-		this.email = 'vishal.lohkare@globant.com';
-		this.password = 'passwd';
-		this.birthdate = '10/21/1987';
-		this.country = 'Denmark';
+    this.studentService = StudentService;
+    this._$stateParams = $stateParams;
+    this.fetchDataByKey();
 	}
+
+  fetchDataByKey () {
+    let key = this._$stateParams.studentId;
+    let data = '';
+    let me = this;
+    let studentPromise = this.studentService.getDataByKey(key);
+    studentPromise.then(function(res) {
+      me.data = res;
+    }, function(err) {
+      console.log(err);
+      me.data = 'No data found'; //  move this into a constant file
+    });
+
+  }
 }
 
 let detailsStudentBindings = {
