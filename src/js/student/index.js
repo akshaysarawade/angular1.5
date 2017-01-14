@@ -9,8 +9,8 @@ studentModule.config(StudentConfig);
 
 
 // Controllers
-import StudentCtrl from './student.controller';
-studentModule.controller('StudentCtrl', StudentCtrl);
+// import StudentCtrl from './student.controller';
+// studentModule.controller('StudentCtrl', StudentCtrl);
 
 
 export default studentModule;

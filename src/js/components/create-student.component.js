@@ -21,7 +21,7 @@ let createStudentBindings = {
 let createStudent = {
 	bindings: createStudentBindings,
 	controller: createStudentCtrl,
-	templateUrl: 'components/createStudent.html'
+	templateUrl: 'components/create-student.html'
 };
 
 export default createStudent;
