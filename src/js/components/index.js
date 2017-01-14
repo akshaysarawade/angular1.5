@@ -2,7 +2,7 @@ import angular from 'angular';
 
 let componentsModule = angular.module('app.components', []);
 
-import Student from './student.component.js';
-componentsModule.component('student', Student);
+import StudentList from './student-list.component.js';
+componentsModule.component('studentList', StudentList);
 
 export default componentsModule;

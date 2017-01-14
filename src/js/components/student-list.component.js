@@ -1,4 +1,4 @@
-class StudentCtrl {
+class StudentListCtrl {
 	constructor(StudentService) {
 		'ngInject';
 		let students = StudentService.getData();
@@ -18,10 +18,10 @@ let studentBindings = {
 
 };
 
-let Student = {
+let StudentList = {
 	bindings: studentBindings,
-	controller: StudentCtrl,
-	templateUrl: 'components/student.html'
+	controller: StudentListCtrl,
+	templateUrl: 'components/student-list.html'
 };
 
-export default Student;
+export default StudentList;

@@ -2,13 +2,10 @@ function StudentConfig($stateProvider) {
   'ngInject';
 
   $stateProvider
-  .state('app.student', {
-    url: '/student',
-    controller: 'StudentCtrl',
-    controllerAs: '$ctrl',
-    templateUrl: 'student/student.html'
+  .state('app.studentList', {
+    url: '/student/list',
+    template: '<student-list></student-list>'
   });
-
 };
 
 export default StudentConfig;
