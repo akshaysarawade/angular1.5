@@ -6,7 +6,7 @@
   <table class="table table-bordered">
     <!-- table caption will be displayed here-->
     <tr>
-      <td id="caption" colspan="4">{{$ctrl.name}}</td>
+      <td id="caption" colspan="7">{{$ctrl.name}}</td>
     </tr>
     <tr>
       <td>Key</td>
@@ -24,9 +24,9 @@
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
       <td>{{student.country}}</td>
-      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.editStudent">Edit</a></td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.editStudent({sutdentId: student.key})">Edit</a></td>
       <td><a class="nav-link" ui-sref-active="active" ui-sref="app.delete">Delete</a></td>
-      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.detailsStudent">Details</a></td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.detailsStudent({sutdentId: student.key})">Details</a></td>
     </tr>
   </table>
 </div>

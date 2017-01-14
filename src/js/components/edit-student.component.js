@@ -1,7 +1,17 @@
 class editStudentCtrl {
-	constructor(StudentService) {
+	constructor(StudentService, $stateParams) {
 		'ngInject';
-		let students = StudentService.getData();
+		this.studentId = $stateParams.studentId;
+		console.log('key',$stateParams.studentId);
+		StudentService.getDataByKey(this.studentId).then(function(data){
+			console.log('data',data);
+			this.name = data.name;//'Vishal V Lohkare';
+			this.email = 'vishal.lohkare@globant.com';
+			this.password = 'passwd';
+			this.birthdate = '10/21/1987';
+			this.country = data.country;//'Denmarks';
+		});
+
 /*		let me = this;
 		students.then(function(res) {
 			me.students = res;
@@ -9,11 +19,6 @@ class editStudentCtrl {
 			console.log(err);
 		});
 */
-		this.name = 'Vishal V Lohkare';
-		this.email = 'vishal.lohkare@globant.com';
-		this.password = 'passwd';
-		this.birthdate = '10/21/1987';
-		this.country = 'Denmarks';
 	}
 }
 

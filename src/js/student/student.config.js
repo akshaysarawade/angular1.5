@@ -11,11 +11,11 @@ function StudentConfig($stateProvider) {
     template: '<create-student></create-student>'
   })
   .state('app.detailsStudent', {
-    url: '/student/details',
+    url: '/student/details/:studentId',
     template: '<details-student></details-student>'
   })
   .state('app.editStudent', {
-    url: '/student/edit',
+    url: '/student/edit/:studentId',
     template: '<edit-student></edit-student>'
   });
 };
