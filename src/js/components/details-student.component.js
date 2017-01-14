@@ -1,8 +1,9 @@
 class detailsStudentCtrl {
-	constructor(StudentService, $stateParams, $scope) {
+	constructor(StudentService, $stateParams) {
 		'ngInject';
     this.studentService = StudentService;
     this._$stateParams = $stateParams;
+    this.readOnly = true;
     this.fetchDataByKey();
 	}
 
