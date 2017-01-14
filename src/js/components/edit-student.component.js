@@ -3,12 +3,12 @@ class editStudentCtrl {
 		'ngInject';
     this.studentService = StudentService;
     this._$stateParams = $stateParams;
+    this.data = {};
     this.fetchDataByKey();
 	}
 
   fetchDataByKey () {
     let key = this._$stateParams.studentId;
-    let data = '';
     let me = this;
     let studentPromise = this.studentService.getDataByKey(key);
     studentPromise.then(function(res) {
@@ -17,7 +17,11 @@ class editStudentCtrl {
       console.log(err);
       me.data = 'No data found'; //  move this into a constant file
     });
+  }
 
+  updateRecord (key) {
+    this.studentService.saveStudent(this.data, key);
+    this.data = {};
   }
 }
 

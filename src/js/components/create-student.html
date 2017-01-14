@@ -4,32 +4,32 @@
     <div class="form-group">
       <label for="firstName" class="col-sm-3 control-label">Full Name</label>
       <div class="col-sm-9">
-        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus ng-model="$ctrl.data.name">
         <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
       </div>
     </div>
     <div class="form-group">
-      <label for="email" class="col-sm-3 control-label">Email</label>
+      <label for="age" class="col-sm-3 control-label">Age</label>
       <div class="col-sm-9">
-        <input type="email" id="email" placeholder="Email" class="form-control">
+        <input type="age" id="age" placeholder="Age" class="form-control" ng-model="$ctrl.data.age">
       </div>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="password" class="col-sm-3 control-label">Password</label>
       <div class="col-sm-9">
         <input type="password" id="password" placeholder="Password" class="form-control">
       </div>
-    </div>
+    </div> -->
     <div class="form-group">
       <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
       <div class="col-sm-9">
-        <input type="date" id="birthDate" class="form-control">
+        <input type="date" id="birthDate" class="form-control" ng-model="$ctrl.data.birthDate">
       </div>
     </div>
     <div class="form-group">
       <label for="country" class="col-sm-3 control-label">Country</label>
       <div class="col-sm-9">
-        <select id="country" class="form-control">
+        <select id="country" class="form-control" ng-model="$ctrl.data.country">
           <option>Afghanistan</option>
           <option>Bahamas</option>
           <option>Cambodia</option>
@@ -37,12 +37,12 @@
           <option>Ecuador</option>
           <option>Fiji</option>
           <option>Gabon</option>
-          <option>Haiti</option>
+          <option>India</option>
         </select>
       </div>
     </div>
     <!-- /.form-group -->
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label class="control-label col-sm-3">Gender</label>
       <div class="col-sm-6">
         <div class="row">
@@ -63,9 +63,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- /.form-group -->
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label class="control-label col-sm-3">Meal Preference</label>
       <div class="col-sm-9">
         <div class="checkbox">
@@ -79,9 +79,9 @@
           </label>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- /.form-group -->
-    <div class="form-group">
+    <!-- <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
         <div class="checkbox">
           <label>
@@ -89,19 +89,13 @@
           </label>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- /.form-group -->
     <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
-<<<<<<< HEAD
-        <button type="submit" class="btn btn-primary">Register</button>
-        <button class="btn btn-warning" ui-sref-active="active"
-          ui-sref="app.studentList">cancel</button>
-=======
         <button type="submit" class="btn btn-primary" ng-click="$ctrl.addNewRecord()">Register</button>
-      <button class="btn btn-warning" ui-sref-active="active"
+        <button class="btn btn-warning" ui-sref-active="active"
         ui-sref="app.studentList">Cancel</button>
->>>>>>> 8dc2704157e7c17c27deb5e421492a15aeebceba
       </div>
     </div>
   </form>

@@ -14,21 +14,22 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="email" class="col-sm-3 control-label">Email</label>
+      <label for="age" class="col-sm-3 control-label">Age</label>
       <div class="col-sm-9">
-        <input type="email" id="email" placeholder="Email" class="form-control" ng-value="$ctrl.email" ng-readonly="$ctrl.readOnly">
+        <input type="age" id="age" placeholder="Age" class="form-control" ng-value="$ctrl.data.age" ng-readonly="$ctrl.readOnly">
       </div>
     </div>
-    <div class="form-group">
-      <label for="password" class="col-sm-3 control-label">Password</label>
-      <div class="col-sm-9">
-        <input type="password" id="password" placeholder="Password" class="form-control" ng-bind="$ctrl.Password" ng-readonly="$ctrl.readOnly">
-      </div>
-    </div>
+
     <div class="form-group">
       <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
       <div class="col-sm-9">
-        <input type="date" id="birthDate" class="form-control" ng-bind="$ctrl.birthDate" ng-readonly="$ctrl.readOnly">
+        <input type="date" id="birthDate" class="form-control" ng-value="$ctrl.data.birthDate" ng-readonly="$ctrl.readOnly">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="country" class="col-sm-3 control-label">Country</label>
+      <div class="col-sm-9">
+        <input type="text" id="country" class="form-control" ng-value="$ctrl.data.country" ng-readonly="$ctrl.readOnly">
       </div>
     </div>
   </form>

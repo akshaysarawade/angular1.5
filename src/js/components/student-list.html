@@ -25,7 +25,7 @@
       <td>{{student.age}}</td>
       <td>{{student.country}}</td>
       <td><a class="nav-link" ui-sref-active="active" ui-sref="app.editStudent({studentId: student.key})">Edit</a></td>
-      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.delete">Delete</a></td>
+      <td><a class="nav-link" ng-click="$ctrl.deleteRecord(student.key)">Delete</a></td>
       <td><a class="nav-link" ui-sref-active="active" ui-sref="app.detailsStudent({studentId: student.key})">Details</a></td>
     </tr>
   </table>
