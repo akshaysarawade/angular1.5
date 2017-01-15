@@ -2,19 +2,20 @@
   <div>
     <button type="button" class="btn btn-primary" ui-sref-active="active"
           ui-sref="app.createStudent">Add</button>
-    <button type="button" class="btn btn-info">Edit</button>
-    <button type="button" class="btn btn-warning">Delete</button>
   </div>
   <table class="table table-bordered">
     <!-- table caption will be displayed here-->
     <tr>
-      <td id="caption" colspan="4">{{$ctrl.name}}</td>
+      <td id="caption" colspan="7">{{$ctrl.name}}</td>
     </tr>
     <tr>
       <td>Key</td>
       <td>Name</td>
       <td>Age</td>
       <td>Country</td>
+      <td><button type="button" class="btn btn-info">Edit</button></td>
+      <td><button type="button" class="btn btn-warning">Delete</button></td>
+      <td><button type="button" class="btn btn-info">Details</button></td>
     </tr>
 
     <!-- students will be displayed here-->
@@ -23,6 +24,9 @@
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
       <td>{{student.country}}</td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.editStudent({studentId: student.key})">Edit</a></td>
+      <td><a class="nav-link" ng-click="$ctrl.deleteRecord(student.key)">Delete</a></td>
+      <td><a class="nav-link" ui-sref-active="active" ui-sref="app.detailsStudent({studentId: student.key})">Details</a></td>
     </tr>
   </table>
 </div>

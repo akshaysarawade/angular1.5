@@ -1,7 +1,9 @@
 class StudentListCtrl {
 	constructor(StudentService) {
 		'ngInject';
-		let students = StudentService.getData();
+    this.studentService = StudentService;
+
+    let students = StudentService.getData();
 		let me = this;
 		students.then(function(res) {
 			me.students = res;
@@ -11,7 +13,10 @@ class StudentListCtrl {
 		this.name = 'Student Records';
 	}
 
-
+  deleteRecord (key) {
+    this.studentService.deleteStudent(key);
+    //  TODO: show a success/error popover
+  }
 }
 
 let studentBindings = {

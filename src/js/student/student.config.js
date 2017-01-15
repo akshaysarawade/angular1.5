@@ -9,6 +9,14 @@ function StudentConfig($stateProvider) {
   .state('app.createStudent', {
     url: '/student/create',
     template: '<create-student></create-student>'
+  })
+  .state('app.detailsStudent', {
+    url: '/student/details/:studentId',
+    template: '<details-student></details-student>'
+  })
+  .state('app.editStudent', {
+    url: '/student/edit/:studentId',
+    template: '<edit-student></edit-student>'
   });
 };
 

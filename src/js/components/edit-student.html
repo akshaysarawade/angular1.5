@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="form-group">
+    <div class="col-sm-9 col-sm-offset-3">
+      <button class="btn btn-warning" ui-sref-active="active"
+        ui-sref="app.studentList">Back to Student List</button>
+    </div>
+  </div>
+  <form class="form-horizontal" role="form">
+    <h2>Registration Form</h2>
+    <div class="form-group">
+      <label for="firstName" class="col-sm-3 control-label">Full Name</label>      <div class="col-sm-9">
+        <input type="text" id="firstName" placeholder="Full Name" class="form-control" ng-model="$ctrl.data.name" autofocus>
+     </div>
+    </div>
+    <div class="form-group">
+      <label for="age" class="col-sm-3 control-label">Age</label>
+      <div class="col-sm-9">
+        <input type="age" id="age" placeholder="Age" class="form-control" ng-model="$ctrl.data.age">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+      <div class="col-sm-9">
+        <input type="date" id="birthDate" class="form-control" ng-model="$ctrl.data.birthDate">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="country" class="col-sm-3 control-label">Country</label>
+      <div class="col-sm-9">
+        <select id="country" class="form-control" ng-model="$ctrl.data.country">
+          <option>Afghanistan</option>
+          <option>Bahamas</option>
+          <option>Cambodia</option>
+          <option>Denmark</option>
+          <option>Ecuador</option>
+          <option>Fiji</option>
+          <option>Gabon</option>
+          <option>Haiti</option>
+        </select>
+      </div>
+    </div>
+    <!-- /.form-group -->
+    <div class="form-group">
+      <div class="col-sm-9 col-sm-offset-3">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.updateRecord($ctrl.data.key)">Update Details</button>
+        <button class="btn btn-warning" ui-sref-active="active"
+          ui-sref="app.studentList">cancel</button>
+      </div>
+    </div>
+  </form>
+  <!-- /form -->
+</div>
+<!-- ./container -->

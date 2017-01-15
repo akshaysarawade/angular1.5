@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <button type="button" class="btn btn-primary">Add</button>
+    <button type="button" class="btn btn-info">Edit</button>
+    <button type="button" class="btn btn-warning">Delete</button>  
+  </div>
+  <table class="table table-bordered">
+    <!-- table caption will be displayed here-->
+    <tr>
+      <td id="caption" colspan="4">{{$ctrl.name}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Country</td>
+    </tr>
+
+    <!-- students will be displayed here-->
+    <tr ng-repeat="student in $ctrl.students">
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.country}}</td>
+    </tr>
+  </table>
+</div>
